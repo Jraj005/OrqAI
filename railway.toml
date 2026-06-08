@@ -1,0 +1,9 @@
+# Railway deployment config
+# https://docs.railway.app/reference/config-as-code
+
+[deploy]
+startCommand = "npm run combined"
+healthcheckPath = "/health"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
