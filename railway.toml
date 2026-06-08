@@ -2,7 +2,7 @@
 # https://docs.railway.app/reference/config-as-code
 
 [deploy]
-startCommand = "npm run combined"
+startCommand = "node migrate.js up && node src/combined.js"
 healthcheckPath = "/health"
 healthcheckTimeout = 30
 restartPolicyType = "on_failure"
